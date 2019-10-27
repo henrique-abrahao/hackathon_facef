@@ -70,8 +70,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             ],
           ),
         ),
-      )
-    );
+      );
   }
 
   Widget getList(BuildContext context, AsyncSnapshot snapshot) {

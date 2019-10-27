@@ -22,7 +22,7 @@ class ButtonMenu extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SvgPicture.asset(icon, height: 48, color: color,),
+              SvgPicture.asset(icon, height: 108, color: color,),
               Text(
                 text,
                 style: TextStyle(fontSize: 18, color: color),

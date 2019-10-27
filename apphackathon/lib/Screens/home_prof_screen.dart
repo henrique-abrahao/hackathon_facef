@@ -27,45 +27,54 @@ class _ProfHomeScreenState extends State<ProfHomeScreen> {
       ),
       body: Stack(
         children: <Widget>[
-          GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, mainAxisSpacing: 0, crossAxisSpacing: 0),
-            children: <Widget>[
-              GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => RegisterScreen(widget.user)));
-                  },
-                  child: ButtonMenu(
-                    text: 'Atividades',
-                    icon: 'image/ATIVIDADES_ICONE.svg',
-                    color: Colors.white,
-                  )),
-              GestureDetector(
-              onTap: (){      Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                  builder: (context) => AlunoScreen(widget.user)));},
-                  child: ButtonMenu(
-                text: 'Alunos',
-                icon: 'image/ALUNOS_ICONE.svg',
-                color: Colors.white,
-              )),
-              GestureDetector(
-                  child: ButtonMenu(
-                text: 'Frequências',
-                icon: 'image/FREQUENCIA_ICONE.svg',
-                color: Colors.white,
-              )),
-              GestureDetector(
-                  child: ButtonMenu(
-                color: Colors.white,
-                text: 'Perfil',
-                icon: 'image/PERFIL_ICONE.svg',
-              ))
-            ],
+          Container(
+            margin: EdgeInsets.only(top: 32),
+            alignment: Alignment.topCenter,
+            height: 108,
+            child: Image.asset('image/logo_inicio.png'),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 148.0),
+            child: GridView(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, mainAxisSpacing: 0, crossAxisSpacing: 0),
+              children: <Widget>[
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterScreen(widget.user)));
+                    },
+                    child: ButtonMenu(
+                      text: 'Atividades',
+                      icon: 'image/ATIVIDADES_ICONE.svg',
+                      color: Colors.white,
+                    )),
+                GestureDetector(
+                onTap: (){      Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context) => AlunoScreen(widget.user)));},
+                    child: ButtonMenu(
+                  text: 'Alunos',
+                  icon: 'image/ALUNOS_ICONE.svg',
+                  color: Colors.white,
+                )),
+                GestureDetector(
+                    child: ButtonMenu(
+                  text: 'Frequências',
+                  icon: 'image/FREQUENCIA_ICONE.svg',
+                  color: Colors.white,
+                )),
+                GestureDetector(
+                    child: ButtonMenu(
+                  color: Colors.white,
+                  text: 'Perfil',
+                  icon: 'image/PERFIL_ICONE.svg',
+                ))
+              ],
+            ),
           ),
         ],
       ),
