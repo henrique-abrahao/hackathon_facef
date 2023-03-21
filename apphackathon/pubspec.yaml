@@ -27,7 +27,7 @@ dependencies:
   flutter_svg: ^0.14.3
   flutter_calendar_carousel: ^1.4.2
   http:
-  dio:
+  dio: any
   bloc: ^0.15.0
   flutter_bloc: ^0.21.0
   bloc_pattern: ^2.3.2
